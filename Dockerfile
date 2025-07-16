@@ -10,8 +10,8 @@ COPY --from=build app/target/*.jar app.jar
 
 ARG AWS_ACESS_KEY_ID
 ARG AWS_SECRET_ACESS_KEY
+ARG AWS_S3_BUCKET
 
 ENV AWS_REGION=us-east-1
-ENV AWS_S3_BUCKET=qrcode-generator-farias
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
